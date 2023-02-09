@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="camp.css">
+    <script
+        src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+        crossorigin="anonymous">
+    </script>
+    <script 
+        src="https://cdn.jsdelivr.net/npm/howler@2.2.3/dist/howler.core.min.js" 
+        integrity="sha256-7jd4UT2X23pMUaYMtEZymG1z27nMtDkPQ+J7bjnIyJQ=" 
+        crossorigin="anonymous">
+    </script>
+    <script defer src="camp.js"></script>
+    <title>Surveyor</title>
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+          <h1>Monster Training Ground</h1>
+        </div>
+        <div id="user-section">
+          <input type="text" name="search" id= "search" placeholder="search">
+          <button id="submit">Search</button><div id="doors">
+            <a href="open.html" id="open">
+                <button  class="back" id="back">Training Entry</button>
+            </a>
+        </div>
+        </div>
+        <div class="popup-overlay" id="overlay">
+            <div class="popup-content" id="content">
+                <h2 id="name"></h2>
+                <p id="desc"></p>
+                <button class="close" id="close">X</button>
+            </div>
+        </div>
+        <div id="results">
+          
+        </div>
+</body>
+</html>
