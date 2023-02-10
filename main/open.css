@@ -1,0 +1,47 @@
+body{
+    background-image: url("https://i.pinimg.com/originals/2f/44/1b/2f441ba97d6e280d52a0c88cc39e569b.jpg");
+    background-position: center center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;   
+    background-size: cover;
+
+}
+
+.title{
+    color: beige;
+    text-align: center;
+}
+
+.img-survey{
+    max-width: 150px;
+    max-height: 150px;
+    position: relative;
+    left: 100px;
+    bottom: -160px;
+    
+}
+
+.sur-btn{
+    background-color: saddlebrown;
+    color: beige;
+    position: relative;
+    left: -20px;
+    bottom: -180px;
+}
+
+.img-arena{
+    max-width: 150px;
+    max-height: 150px;
+    position: relative;
+    left: 480px;
+    bottom: -180px;
+    
+}
+
+.arena{
+    background-color: red;
+    color: black;
+    position: relative;
+    left: 380px;
+    bottom: -200px;
+}
