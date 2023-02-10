@@ -26,7 +26,7 @@ body{
     color: beige;
     position: relative;
     left: -20px;
-    bottom: -180px;
+    bottom: 0px;
 }
 
 .img-arena{
@@ -43,5 +43,5 @@ body{
     color: black;
     position: relative;
     left: 380px;
-    bottom: -200px;
+    bottom: -22px;
 }
