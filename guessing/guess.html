@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="guess.css">
+    <script
+        src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+        crossorigin="anonymous">
+    </script>
+    <script 
+        src="https://cdn.jsdelivr.net/npm/howler@2.2.3/dist/howler.core.min.js" 
+        integrity="sha256-7jd4UT2X23pMUaYMtEZymG1z27nMtDkPQ+J7bjnIyJQ=" 
+        crossorigin="anonymous">
+    </script>
+    <script defer src="guess.js"></script>
+    <title>Training Grounds</title>
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+          <h1 class="title">BATTLE ARENA</h1>
+        </div>
+        <div class="creature" id="creature">
+            <span id="span2">Monster to Fight
+                <h3 id="mon-name"></h3>
+                <div class="img" id="img">
+                    <img id="newImg"></img>
+                </div>
+                <p id="challenge"></p>
+            </span>
+        </div>
+        <div class="playerBtn">
+            <h1 id="inst">Which magic will fall the beast?</h1>
+            <a>
+                <img src="../Image/fireball.png" class="fireSpell"></image>
+                <button id="fire" class="fireBtn">FIRE</button>
+            </a>
+            <a>
+                <img src="../Image/ice-bomb.png" class="iceSpell"></image>
+                <button id="ice" class="iceBtn">ICE</button>
+            </a>
+            <a>
+                <img src="../Image/electric.png" class="lightSpell"></image>
+                <button id="lightning" class="lightBtn">LIGHTNING</button>
+            </a>
+            <a>
+                <img src="../Image/wind-magic.png" class="windSpell"></image>
+                <button id="wind" class="windBtn">WIND</button>
+            </a>
+            <p class="fail">Not quite try again.</p>
+            <p class="epic">You guessed wrong and now will be eaten!</p>
+        </div>
+        <div id="run-game">
+            <button id="restart" class="restart">Next Monster</button>
+        </div>
+        <div id="btns">
+            <a href="../main/open.html" id="home">
+                <button  class="lobby" id="lobby">Guild Hall</button>
+            </a>
+            <a href="../surveyor/index.html" id="surveyM">
+                <button class="sur-btn" id="survey">Training Camp</button>
+            </a>
+        </div>
+</body>
+</html>
