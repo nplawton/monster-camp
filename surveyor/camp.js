@@ -39,11 +39,11 @@ function userSearch(){
     //console.log(userInput);
     
 }
-
+//https://www.thesportsdb.com/api/v1/json/3/searchplayers.php?p=
 function monsterFinder(){
     //DnD Monster Lister
     $.get(`https://api.open5e.com/monsters/?search=${monster}`, (data) => {
-        //console.log(data);
+        console.log(data);
 
         //pop-up Window Variables
         let overlay = $('#overlay');
@@ -53,7 +53,7 @@ function monsterFinder(){
         //let searchResults = data;
         //console.log(searchResults);
 
-        for (let i = 0; i < 5; i++){
+        for (let i = 0; i < 10; i++){localStorage
             const searchResult = data.results[i];
             //console.log(searchResult);
 
@@ -61,7 +61,7 @@ function monsterFinder(){
             //console.log($resultVault);
 
             //Setup paramaters to store data in seperate spans
-            let $span1 = $('<span></span>');
+            let $span1 = $('<span id="monster-card"></span>');
             $span1.addClass('monster-card');
             $resultVault.append($span1);
 

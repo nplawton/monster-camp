@@ -1,3 +1,12 @@
+body{
+    background-image: url('https://i.pinimg.com/736x/87/93/f8/8793f89161bb4b41fad485e1301f32bb.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+}
+
 .popup-overlay{
     visibility: hidden;
 }
@@ -29,4 +38,61 @@
     position: absolute;
     top: 30%;
     left: 15%;
+}
+
+#results {
+    width: 700px;
+    background-color:rgba(139, 69, 19, .5);
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 20px;
+    padding: 20px;
+}
+  
+#monster-card {
+    width: 600px;
+    background-color: beige;
+    color: black;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px;
+    display: inline-block;
+}
+
+.monster{
+    text-align: center;
+    font-size: 30px;
+}
+
+.stat{
+    font-size: 15px;
+    text-align: center;
+}
+
+#submit{
+    background-color: burlywood;
+}
+
+.lobby{
+    background-color: rgb(102, 87, 0);
+    color: beige;
+}
+
+.arena{
+    background-color: red;
+    color: black;
+}
+
+.attackBtn, .abilityBtn {
+    border: none;
+    color: blue;
+    background-color: beige;
+}
+
+.title{
+    color: white;
+}
+
+#portals{
+    text-align: center;
 }
