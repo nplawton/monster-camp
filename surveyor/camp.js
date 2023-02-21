@@ -61,15 +61,15 @@ function monsterFinder(){
             //console.log($resultVault);
 
             //Setup paramaters to store data in seperate spans
-            let $span1 = $('<span id="monster-card"></span>');
-            $span1.addClass('monster-card');
+            let $span1 = $('<span id="monster-card" class="monster-card"></span>');
+            //$span1.addClass('monster-card');
             $resultVault.append($span1);
 
             //Create a H3 for the Title
-            let monsterName = $('<h3></h3>');
-            monsterName.addClass('monster');
-            let monsterNameStr = searchResult.name.toUpperCase();
-            monsterName.text(monsterNameStr);
+            let monsterName = $(`<h3 id="monster" class="monster">${searchResult.name.toUpperCase()}</h3>`);
+            //monsterName.addClass('monster');
+            //let monsterNameStr = searchResult.name.toUpperCase();
+            //monsterName.text(monsterNameStr);
             //console.log(monsterName);
             $span1.append(monsterName);
 
@@ -78,24 +78,23 @@ function monsterFinder(){
             $span1.append($div1);
 
             //Holder for two ability paragrpahs
-            let $holder1 = $('<ul></ul>')
+            let $holder1 = $('<ul id="holder"></ul>')
             $div1.append($holder1);
-
-            
+                        
             //Base start have all abilities but long goal is to drop it to pop-up window for description
-            let actions = $('<li></li>');
-            actions.text('Common Attacks: ')
+            let actions = $('<li class="attack">Common Attacks:</li>');
+            //actions.text('Common Attacks: ')
             $holder1.append(actions);
             let actionStr = searchResult.actions;
             for (f = 0; f < actionStr.length; f++){
                 //console.log(actionStr[f].name);
                 let attackName = actionStr[f].name;
                 let attackDesc = actionStr[f].desc;
-                let attackBtn = $('<button></button>');
+                let attackBtn = $(`<button class="attackBtn">${attackName}</button>`);
                 let attackTitle = $('#name');
                 let fightDesc = $('#desc');
-                attackBtn.addClass('attackBtn');
-                attackBtn.text(attackName);
+                //attackBtn.addClass('attackBtn');
+                //attackBtn.text(attackName);
                 actions.append(attackBtn);
                 attackBtn.click(() => {
                     attackTitle.text(attackName);
@@ -105,9 +104,14 @@ function monsterFinder(){
                 });
             }
 
+            //Image for project
+            let image = 'https://cdn.shopify.com/s/files/1/0539/4831/7877/products/dnd-d20-throw-blanket-2_512x512.jpg?v=1614773057';
+            monImage = $(`<img src="${image}" id="monImage"></img>`);
+            $holder1.append(monImage);
+
             //Base Start to have all special notes
-            let ability = $('<li></li>');
-            ability.text('Monster Traits: ');
+            let ability = $('<li class="ability">Special Qualities:</li>');
+            //ability.text('Monster Traits: ');
             $holder1.append(ability); 
             //let abilityArr = [];
             let abilityStr = searchResult.special_abilities;
@@ -156,4 +160,30 @@ function monsterFinder(){
         }
 
     });
+}
+
+//code to generate and minpulate the accordian
+let acc = $('.accordian');
+
+// acc.click(() => {
+//     console.log(test());
+// });
+
+for (let p = 0; p < acc.length; p++){
+    
+    acc[p].addEventListener("click", function(){
+        //console.log(test());
+        /* Toggle between adding and removing the "ACTIVE" class,
+        to highlight the button that controls the panel*/
+        this.classList.toggle('active');
+
+        /* Toggle between hiding and showing the active panel*/
+        let panel = this.nextElementSibling;
+        if(panel.style.maxHeight){
+            panel.style.maxHeight = null;
+        }else{
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+    });
+
 }

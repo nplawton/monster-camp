@@ -19,17 +19,30 @@
     <title>Surveyor</title>
 </head>
 <body>
-    <div id="main">
+    <div id="main" class="row">
         <div id="header">
           <h1 class="title">Monster Training Ground</h1>
         </div>
-        <div id="user-section">
+        <div class="library column left">
+            <button class="accordian">Monster Manuals</button>
+            <div class="panel">
+                <a href="https://ia904709.us.archive.org/16/items/dungeon-masters-guide/Monster%20Manual.pdf">Monster Manual V</a>
+            </div>
+            <button class="accordian">Campaign Monster</button>
+            <div class="panel">
+                <a href="http://thyamath.com/donjons/[DD]Fiendish_Codex_I_-_Hordes_of_the_Abyss.pdf">Hordes of the Abyss</a>
+            </div>
+            <button class="accordian">Non-Traddtional Monster Books</button>
+            <div class="panel">
+                <a href="http://dnd.etherealspheres.com/eBooks/DnD_3.5/core/D&D%203.5%20Epic%20Level%20Handbook.pdf">Epic Level Handbook</a>
+            </div>
+        </div>
+        <div id="user-section" class="column left">
           <input type="text" name="search" id= "search" placeholder="search">
           <button id="submit">Search</button><div id="doors">
             <a href="../main/open.html" id="home">
                 <button class="lobby" id="lobby">Guild Hall</button>
             </a>
-        </div>
         </div>
         <div class="popup-overlay" id="overlay">
             <div class="popup-content" id="content">
@@ -38,7 +51,7 @@
                 <button class="close" id="close">X</button>
             </div>
         </div>
-        <div id="results">
+        <div id="results" class="column right">
             
         </div>
         <div id="portals">
@@ -49,5 +62,6 @@
                 <button class="arena" id="arena">Battle Arena</button>
             </a>
         </div>
+    </div>
 </body>
 </html>

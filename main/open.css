@@ -24,24 +24,24 @@ body{
 .sur-btn{
     background-color: saddlebrown;
     color: beige;
-    position: relative;
-    left: -20px;
-    bottom: 0px;
+    position:   absolute;
+    left: 120px;
+    bottom: 410px;
 }
 
 .img-arena{
-    max-width: 150px;
+    max-width: 100px;
     max-height: 150px;
-    position: relative;
-    left: 480px;
-    bottom: -180px;
+    position: absolute;
+    left: 740px;
+    bottom: 255px;
     
 }
 
 .arena{
     background-color: red;
     color: black;
-    position: relative;
-    left: 380px;
-    bottom: -22px;
+    position: absolute;
+    left: 750px;
+    bottom: 380px;
 }

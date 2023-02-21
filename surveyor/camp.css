@@ -40,6 +40,11 @@ body{
     left: 15%;
 }
 
+.close{
+    left: 10px;
+    right: auto;
+}
+
 #results {
     width: 700px;
     background-color:rgba(139, 69, 19, .5);
@@ -76,6 +81,7 @@ body{
 .lobby{
     background-color: rgb(102, 87, 0);
     color: beige;
+    
 }
 
 .arena{
@@ -95,4 +101,91 @@ body{
 
 #portals{
     text-align: center;
+}
+
+#holder{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    
+}
+
+#monImage{
+    width: 150px;
+    height: 150px;
+    
+}
+.attack, .ability{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    text-align: left;
+}
+
+/*.library{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}*/
+
+.accordian{
+    background-color: rgba(139, 69, 19, .8);
+    cursor: pointer;
+    padding: 18px;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+.active, .accordian:hover {
+    background-color: red;
+    color: black;
+}
+
+.panel{
+    padding: 0 18px;
+    background-color: beige;
+    color: blue;
+    max-height: 0;
+    width: 30%;
+    /*display: none;*/
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordian:after{
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 8px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after{
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column{
+    float: left;
+}
+
+.left {
+    width: 25%;
+}
+
+right {
+    width: 75%;
 }
